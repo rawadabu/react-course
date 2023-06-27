@@ -8,7 +8,7 @@ They enforce a "correct" way of structuring and writing code, and give developer
 
 ## What is React?
 
-- Its JavaScript library for building user interfaces.
+- Its JavaScript library created in 2011 by Jordan Walke, for building user interfaces.
 - Extremely popular, declarative, component-based, state-driven JavaScript library for building user interfaces, created by _Facebook_.
 - React is all about components(use them more than once), such as buttons, input fields, search bars and so on.
 - We describe how components look like and how they work using a declarative syntax called _JSX_.
