@@ -18,3 +18,5 @@ They enforce a "correct" way of structuring and writing code, and give developer
 - State-driven: Example: array of apartments[STATE] -> Render -> UI[COMPONENT WRTIEN WITH JSX] -> Update State -> Back to [STATE] and Re-render again.
 
 * REACT REACTS TO STATE CHANGES BY RE-RENDERING THE UI.\*
+
+To create React app, we use `npx create-react-app@5 [app-name]` while `@5` to lock in version 5.
