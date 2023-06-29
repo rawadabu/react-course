@@ -144,7 +144,7 @@ function getBook(id) {
 }
 
 // Destructuring
-
+/*
 const book = getBook(2);
 book;
 
@@ -197,3 +197,17 @@ const getYear = (str) => {
 };
 
 console.log(getYear(publicationDate));
+*/
+const book = getBooks();
+
+const x = [1, 2, 3, 4, 5].map((le) => le * 2);
+x;
+
+const title = book.map((book) => book.title); // For each book element, return his book title
+
+const essentialData = book.map((book) => ({
+  title: book.title,
+  author: book.author,
+}));
+
+essentialData;
