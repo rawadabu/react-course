@@ -209,5 +209,3 @@ const essentialData = book.map((book) => ({
   title: book.title,
   author: book.author,
 }));
-
-essentialData;
