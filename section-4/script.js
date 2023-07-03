@@ -209,3 +209,54 @@ const essentialData = book.map((book) => ({
   title: book.title,
   author: book.author,
 }));
+
+// Filter
+
+const longBooks = book
+  .filter((book) => book.pages > 1000)
+  .filter((book) => book.hasMovieAdaptation);
+longBooks;
+
+const adventureBooks = book
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => book.title);
+adventureBooks;
+
+// Reduce, to reduce the entire array into one value
+
+const pagesAllBooks = book.reduce((acc, book) => acc + book.pages, 0);
+pagesAllBooks;
+// On first iteration, acc = 0, book.pages = first book pages
+// Second iteration, acc = 0 + first book pages, book.pages = second book pages.
+// Third iteration, acc = 0 + first book pages + second book pages, book.pages = third book pages
+// and so on to the end of the array
+
+// Sort
+
+const arr = [3, 7, 1, 9, 6];
+const sorted = arr.slice().sort((a, b) => a - b); // To create a copy and not to change the original array
+sorted;
+arr;
+// a,b are always the current value, and the next value
+// and in a-b when returns a negative value, it basically sort these two numbers
+
+// Working with immutable arrays
+// 1) add new book object to array
+const newBook = {
+  id: 6,
+  title: "Harry potter and the Chamber of secrets",
+  author: "J. K. Rowling",
+};
+
+const bookAfterAdd = [...book, newBook];
+bookAfterAdd;
+
+// 2) Delete book from the array
+const booksAfterDelete = bookAfterAdd.filter((book) => book.id !== 3);
+
+// 3) update the book object in the array
+const bookAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 10 } : book
+);
+
+bookAfterUpdate;
