@@ -198,6 +198,7 @@ const getYear = (str) => {
 
 console.log(getYear(publicationDate));
 */
+/*
 const book = getBooks();
 
 const x = [1, 2, 3, 4, 5].map((le) => le * 2);
@@ -260,3 +261,21 @@ const bookAfterUpdate = booksAfterDelete.map((book) =>
 );
 
 bookAfterUpdate;
+*/
+// Asynchronous
+// Fetching data  takes time, because JavaScript needs to do HTTP request, and needs to wait
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+// then() will called after fullfilled promise(data arrived)
+console.log("Rawad");
+// Without Async/wait, Rawad will printed before the fetch data
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
+getTodos();
+console.log("Rawad");
