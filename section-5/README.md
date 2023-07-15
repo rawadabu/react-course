@@ -1,0 +1,12 @@
+# Working with Components, Props, and JSX
+
+## What is JSX
+
+- Declarative syntax to describe what components look like and how they work.
+- Components must return block of JSX.
+- Extension of JS that allows us to embed JS, CSS and React components into HTML.
+- Conversion HTML to JS happens using BABEL.
+
+Everything happens without any DOM manipulaton at all, So there are no Query selectors, no add event listeners, no class list, no text content properties anywhere to be seen here
+
+- React is an abstaction away from DOM: we never touch the DOM directly!
