@@ -10,3 +10,5 @@
 Everything happens without any DOM manipulaton at all, So there are no Query selectors, no add event listeners, no class list, no text content properties anywhere to be seen here
 
 - React is an abstaction away from DOM: we never touch the DOM directly!
+- JSX works essentially like HTML, but we can enter "JavaScript mode" by using {}.
+- We can place JavaScript expressions inside {}.
