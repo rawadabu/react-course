@@ -19,3 +19,7 @@ We can use _useState_ in order to track data that changes over the life cycle of
 ## When and where to use?
 
 Please refer to lect. 79.
+
+## Deriving State
+
+State that is computed from an existing piece of state or from props.
