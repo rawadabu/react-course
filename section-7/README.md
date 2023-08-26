@@ -15,3 +15,7 @@ We can use _useState_ in order to track data that changes over the life cycle of
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | State needed only by one or few component                                                                 | State that many component might use                                         |
 | Defined in a component and only that component and child component have access to it by passing via props | Share state that is accessible to every component in the entire application |
+
+## When and where to use?
+
+Please refer to lect. 79.
