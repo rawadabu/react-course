@@ -55,4 +55,5 @@ Diffing uses 2 fundamental assumptions(rules):
 
 1. Two elements of different types will produce different trees.
 2. Elements with a stable key prop stay the same across renders.
-   > Thiss allows React to go from 1,000,000,000 [O(n^3)] to 1000 [O(n)] operation per 1000 elements!!!!
+
+> Thiss allows React to go from 1,000,000,000 [O(n^3)] to 1000 [O(n)] operation per 1000 elements!!!!
