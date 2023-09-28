@@ -65,3 +65,5 @@ Diffing uses 2 fundamental assumptions(rules):
 👉 Allows React to distinguish between multiple instances of the same component type.
 
 👉 When a key _stays the same across renders_, the element will be kept in the DOM(even if the position in the tree changes).
+
+👉 When a key _changes between renders_, the element will be destroyed and a new one will be created(even if the position in the tree is the same as before).
