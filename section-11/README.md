@@ -57,3 +57,11 @@ Diffing uses 2 fundamental assumptions(rules):
 2. Elements with a stable key prop stay the same across renders.
 
 > Thiss allows React to go from 1,000,000,000 [O(n^3)] to 1000 [O(n)] operation per 1000 elements!!!!
+
+## The Key Prop
+
+👉 Special prop that we use to tell the diffing algorithm that an element is UNIQUE.
+
+👉 Allows React to distinguish between multiple instances of the same component type.
+
+👉 When a key _stays the same across renders_, the element will be kept in the DOM(even if the position in the tree changes).
