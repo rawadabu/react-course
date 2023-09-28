@@ -48,3 +48,11 @@
 2. RENDER PHASE 🔄 Updated React Elements → New Virtual DOM → Reconciliation + Diffing → Updated Fiber Tree → List of DOM Updates.
 3. COMMIT PHASE 🚀 Updated DOM
 4. BROWSER PAINT 🖼️
+
+## How Diffing Works
+
+Diffing uses 2 fundamental assumptions(rules):
+
+1. Two elements of different types will produce different trees.
+2. Elements with a stable key prop stay the same across renders.
+   > Thiss allows React to go from 1,000,000,000 [O(n^3)] to 1000 [O(n)] operation per 1000 elements!!!!
