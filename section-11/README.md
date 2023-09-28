@@ -42,7 +42,7 @@
 - Committing is synchronous: DOM is updated in one go, it can't be interrupted. This is necessary so that the DOM never shows partial results, ensuring a consistent UI(in sync with state at all times).
 - After the commit phase completes, the workInProgress fiber tree becomes the current tree for the net render cycle.
 
-* React does not touch the DOM. React only renders. It doesn't know where the render result will go \*\*
+> React does not touch the DOM. React only renders. It doesn't know where the render result will go
 
 1. TRIGGER 💥
 2. RENDER PHASE 🔄 Updated React Elements → New Virtual DOM → Reconciliation + Diffing → Updated Fiber Tree → List of DOM Updates.
