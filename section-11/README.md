@@ -104,3 +104,14 @@ Render login must produce no side effect: no interaction with the "outisde world
   2. Given the same input, a pure function always returns the same output.
 
 > Side effects are not bad! A program can only be useful if it has some iteraction with the outside world.
+
+## State Update Batching
+
+### How State Updates Are Batched
+
+Lecture 135.
+Imaging having 3 states in one event handler function, and all these states updated, so would the component updated 3 times? NO!
+
+👉 All the states will get into just one state update for the entire event handler _THEY ARE BATCHED_.
+
+👉 Updating state in React is ASYNCHRONOUS, so updated state variables are NOT immediately available after setState call, but only after the RE-RENDER(This also applies when only one state variable updated).
