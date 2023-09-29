@@ -69,3 +69,32 @@ Diffing uses 2 fundamental assumptions(rules):
 👉 When a key _changes between renders_, the element will be destroyed and a new one will be created(even if the position in the tree is the same as before).
 
 ## Rules for Render Login: Pure Components
+
+The two types of logic:
+
+1. Render Logic: The code that is executed as soon as the component rendered.
+
+   1. Code that lives at the top level of the component function.
+   2. Participates in descriping how the component view looks like(the return scope of the function).
+
+2. Event handler functions:
+   1. Executed as a consequence of the event that the handler is listening for(onChange for example).
+   2. Code that actually does thing: update state, perform an HTTP request, read an input field, navigate to another page, etc.
+
+> Components must be pure when it comes to render logic: given the same props(input), a component instance should always return the same JSX(output).
+> Render login must produce no side effect: no interaction with the "outisde world" is allowed. So in render logic:
+> 👉 Do NOT perform network requests(API calls).
+> 👉 Do NOT start times.
+> 👉 Do NOT directly use the DOM API.
+> 👉 Do NOT mutate objects or variables outside of the function scope.
+> 👉 Do NOT update state (or refs): this will create an infinite loop!
+
+## Refresher: Functional Programming Principles
+
+- Side effect: dependency on or modification of any data outside the function scope. "Interaction with the outside world". Examples: mutating external variables, HTTP request, writing to DOM.
+
+- Pure function: a function that has no side effect.
+  1. Does not change any variables outside its scope.
+  2. Given the same input, a pure function always returns the same output.
+
+> Side effects are not bad! A program can only be useful if it has some iteraction with the outside world.
