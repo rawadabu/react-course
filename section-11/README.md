@@ -84,10 +84,15 @@ The two types of logic:
 > Components must be pure when it comes to render logic: given the same props(input), a component instance should always return the same JSX(output).
 
 Render login must produce no side effect: no interaction with the "outisde world" is allowed. So in render logic:
+
 👉 Do NOT perform network requests(API calls).
+
 👉 Do NOT start times.
+
 👉 Do NOT directly use the DOM API.
+
 👉 Do NOT mutate objects or variables outside of the function scope.
+
 👉 Do NOT update state (or refs): this will create an infinite loop!
 
 ## Refresher: Functional Programming Principles
