@@ -115,3 +115,5 @@ Imaging having 3 states in one event handler function, and all these states upda
 👉 All the states will get into just one state update for the entire event handler _THEY ARE BATCHED_.
 
 👉 Updating state in React is ASYNCHRONOUS, so updated state variables are NOT immediately available after setState call, but only after the RE-RENDER(This also applies when only one state variable updated).
+
+## How Events Work in React
